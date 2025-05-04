@@ -9,6 +9,13 @@ fi
 # Update & Upgrade system
 apt update && apt upgrade -y
 
+# Add Folder Color PPA and install folder-color
+add-apt-repository ppa:costales/folder-color -y
+apt update
+apt install -y folder-color
+# Restart Nautilus to apply folder-color extension
+nautilus -q
+
 # Install essential packages
 deb_packages=(
     "gnome-tweaks"
@@ -43,7 +50,7 @@ apt update && apt install -y cloudflare-warp
 
 # Install ProtonVPN
 wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.6_all.deb
-sudo dpkg -i protonvpn-stable-release_1.0.6_all.deb && sudo apt update && sudo apt install -y protonvpn
+dpkg -i protonvpn-stable-release_1.0.6_all.deb && apt update && apt install -y protonvpn
 rm protonvpn-stable-release_1.0.6_all.deb
 
 # Install Network Stats GNOME Extension
@@ -85,4 +92,4 @@ gsettings set $profile_path foreground-color "#2777FF"
 gsettings set $profile_path use-transparent-background true
 gsettings set $profile_path background-transparency-percent 15
 
-echo "\nUbuntu customization complete! Please restart your system for all changes to take effect. 🚀"
+echo -e "\nUbuntu customization complete! Please restart your system for all changes to take effect. 🚀"
