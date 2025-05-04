@@ -1,61 +1,61 @@
 # Ubuntu Starter Pack
 
-Ubuntu Starter Pack is a comprehensive shell script designed to automate the installation and configuration of essential software, themes, extensions, and system tweaks on Ubuntu. This script ensures a seamless setup experience for users who want a polished and optimized system without manual configurations.
+Ubuntu Starter Pack is a comprehensive shell script designed to automate the installation and configuration of essential software, themes, extensions, and system tweaks on Ubuntu 24. It delivers a polished, secure, and optimized desktop environment with minimal effort.
 
 ## Features
 
 ### 🛠 System Enhancements
-- Installs **GNOME Tweaks** and **GNOME Extension Manager**
-- Applies **WhiteSur Dark Theme** for both **Shell** and **Legacy Applications**
-- Customizes **GNOME Dock** (centered, panel mode off, auto-hide enabled, icon size: 32px)
+- **Folder Color**: Adds PPA and installs `folder-color`, allowing custom folder icons via Nautilus.
+- **GNOME Tweaks & Extension Manager**: Provides advanced settings and extension control.
+- **User Themes Extension**: Enables custom Shell themes.
+- **WhiteSur Dark Theme**: Applies a macOS-inspired theme for both Shell and Legacy Applications.
+- **GNOME Dock Customization**: Centers the Dock, disables panel mode, enables auto-hide, sets icon size to 32px.
 
-### 🖥 Terminal Customization
-- Configures **GNOME Terminal Profile**:
-  - Font: **Liberation Mono**
-  - Background Color: **#171717**
-  - Text Color: **#2777FF**
-  - **85% transparency** for a sleek, semi-transparent look
+### 🚀 Performance & Optimization
+- **Preload**: Speeds up frequently used applications by preloading.
+- **Neofetch & htop**: System information and process monitoring tools.
 
-### 📦 Essential Software Installations
-- Installs **Git, Python (pip & venv), Java, VS Code**
-- Installs **Neofetch & htop** for system monitoring
-- Installs **File Roller** (Download & Install: [file-roller_44.5-1_amd64.deb](http://launchpadlibrarian.net/775837054/file-roller_44.5-1_amd64.deb))
-- Installs **Microsoft Fonts** with auto-accept EULA
+### 🖥 Development Tools
+- **Git**: Version control system.
+- **Python 3** with **pip** and **venv**: For scripting and virtual environments.
+- **OpenJDK 17**: Java runtime and development kit.
+- **VS Code**: Installed via Snap for code editing.
+
+### 📦 Essential Applications
+- **Telegram Desktop**: Messaging client via Snap.
+- **File Roller 44.5**: Archive manager installed from a Debian package.
+- **Microsoft Fonts**: Automatically installs core fonts with EULA acceptance.
 
 ### 🌐 Network & VPN Tools
-- Installs **Cloudflare WARP** for secure internet browsing
-- Installs **Proton VPN** for additional privacy
+- **Cloudflare WARP**: Secure DNS and WAN tunneling.
+- **ProtonVPN**: Privacy-focused VPN client repository installation.
+- **Network Stats** Extension: GNOME extension showing network usage in the top bar.
 
-### 🔌 GNOME Extensions
-- Installs **User Themes** extension automatically
-- Installs **Network Stats** extension ([GitHub Repository](https://github.com/noroadsleft000/gnome-network-stats))
-
-### 📩 Messaging & Communication
-- Installs **Telegram Desktop** via Snap
-
-### 🔄 System Update
-- Performs **`sudo apt update && sudo apt upgrade`** at the end of the script
+### 🔄 System Update & Upgrade
+- The script concludes with `sudo apt update && sudo apt upgrade -y` to ensure all packages are current.
 
 ---
 
 ## Installation
 
-To run this script on your Ubuntu system, execute the following command:
+Run the following single command to set up your system:
 
 ```bash
-wget -O Ubuntu.sh "https://raw.githubusercontent.com/ZAYUVALYA/Ubuntu-Starter-Pack/refs/heads/main/Ubuntu.sh" && chmod +x Ubuntu.sh && sudo bash Ubuntu.sh
+wget -O Ubuntu.sh "https://raw.githubusercontent.com/ZAYUVALYA/Ubuntu-Starter-Pack/refs/heads/main/Ubuntu.sh" \
+  && chmod +x Ubuntu.sh \
+  && sudo bash Ubuntu.sh
 ```
 
 This command will:
-1. **Download the script**
-2. **Make it executable**
-3. **Run it with sudo privileges**
+1. **Download** the latest `Ubuntu.sh` script.
+2. **Make it executable**.
+3. **Execute** it with root privileges.
 
 ---
 
 ## Repository
-🔗 **GitHub Repo:** [Ubuntu Starter Pack](https://github.com/ZAYUVALYA/Ubuntu-Starter-Pack)
+🔗 **GitHub**: [ZAYUVALYA/Ubuntu-Starter-Pack](https://github.com/ZAYUVALYA/Ubuntu-Starter-Pack)
 
 ---
 
-This script is perfect for users looking to **quickly set up and optimize Ubuntu** with a **modern look and essential tools**. 🚀
+Make your Ubuntu 24 installation **secure**, **stylish**, and **ready for productivity** in one step! 🚀
