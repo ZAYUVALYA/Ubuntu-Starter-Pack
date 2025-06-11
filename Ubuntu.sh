@@ -9,14 +9,23 @@ fi
 # Update & Upgrade system
 apt update && apt upgrade -y
 
-# Add Folder Color PPA and install folder-color
-add-apt-repository ppa:costales/folder-color -y
+# Uninstall Snap and related packages
+snap remove firefox telegram-desktop code 2>/dev/null
+apt purge -y snapd
+rm -rf ~/snap /snap /var/snap /var/lib/snapd /var/cache/snapd
+
+# Install Firefox from Mozilla PPA
+add-apt-repository -y ppa:mozillateam/ppa
+apt update
+apt install -y firefox
+
+# Install Folder Color
+add-apt-repository -y ppa:costales/folder-color
 apt update
 apt install -y folder-color
-# Restart Nautilus to apply folder-color extension
 nautilus -q
 
-# Install essential packages
+# Install essential APT packages
 deb_packages=(
     "gnome-tweaks"
     "gnome-shell-extension-manager"
@@ -35,9 +44,7 @@ for package in "${deb_packages[@]}"; do
     apt install -y "$package"
 done
 
-# Install Snap packages
-snap install telegram-desktop --classic
-snap install code --classic
+# Install Snap alternatives via APT if needed
 
 # Install Microsoft Fonts with auto-accept EULA
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula boolean true | debconf-set-selections
@@ -50,7 +57,7 @@ apt update && apt install -y cloudflare-warp
 
 # Install ProtonVPN
 wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.6_all.deb
-dpkg -i protonvpn-stable-release_1.0.6_all.deb && apt update && apt install -y protonvpn
+sudo dpkg -i protonvpn-stable-release_1.0.6_all.deb && sudo apt update && sudo apt install -y protonvpn
 rm protonvpn-stable-release_1.0.6_all.deb
 
 # Install Network Stats GNOME Extension
@@ -92,4 +99,4 @@ gsettings set $profile_path foreground-color "#2777FF"
 gsettings set $profile_path use-transparent-background true
 gsettings set $profile_path background-transparency-percent 15
 
-echo -e "\nUbuntu customization complete! Please restart your system for all changes to take effect. 🚀"
+echo "\nUbuntu customization complete! Please restart your system for all changes to take effect. 🚀"
