@@ -1,59 +1,64 @@
 # Ubuntu Starter Pack
 
-A powerful setup script to instantly configure a fresh Ubuntu 24+ system with modern UI, essential tools, and useful tweaks for developers and daily users.
+Ubuntu Starter Pack is a comprehensive shell script designed to automate the installation, removal, and configuration of essential software, themes, extensions, and performance tweaks on Ubuntu 24.04. This script ensures a **seamless, fast, and modern** setup experience by removing unwanted Snap packages, adding Flatpak support, and applying a polished GNOME desktop environment.
+
+## Features
+
+### 🧹 Snap Removal & Alternative Browsers
+- **Removes Snapd** and all Snap packages (including Firefox and Snap Store)
+- **Installs Firefox** from the official Mozilla PPA (Deb package)
+
+### 🛠 System Enhancements
+- **Installs essential APT packages**: GNOME Tweaks, Extension Manager, Dconf Editor, Git, Python (pip & venv), Java (OpenJDK), Neofetch, Htop, Preload
+- **Installs Ubuntu Cleaner** via PPA for easy system cleanup
+- **Installs Folder Color** for Nautilus via PPA and restarts Nautilus
+
+### 🌐 Network & VPN Tools
+- **Cloudflare WARP** for secure DNS and browsing
+- **ProtonVPN** (official Debian package) for privacy
+
+### 🖥 Flatpak & GNOME Software
+- **Installs Flatpak** and **GNOME Software Flatpak plugin**
+- **Adds Flathub repository**
+- **Installs Telegram Desktop** via Flatpak
+
+### 💻 Development & Productivity
+- **Installs VS Code** (Deb package) from Microsoft APT repository
+- **Installs File Roller** (Archive Manager) from Launchpad .deb
+- **Installs Git, Python, Java**, and sets up Python virtual environments
+
+### 🎨 GNOME Customization
+- **Installs Network Stats GNOME extension** from GitHub
+- **Applies WhiteSur Dark GTK theme** for Shell & Legacy Applications
+- **Customizes GNOME Dock**: Centered, panel mode off, auto-hide enabled, icon size 32px
+- **Customizes GNOME Terminal**: Liberation Mono 12, background `#171717`, text `#2777FF`, 85% transparency
+
+### 🔄 Final System Update
+- Performs a final `apt update && apt upgrade -y` to ensure all components are up-to-date
 
 ---
 
-## 🧰 Features
+## Installation
 
-- Removes all Snap-related packages (including Snap Store and Snap Firefox)
-- Installs Firefox from Mozilla's official PPA
-- Installs essential GNOME tools:
-  - GNOME Tweaks
-  - GNOME Shell Extension Manager
-  - Dconf Editor
-- Installs and enables WhiteSur-dark theme
-- Installs Microsoft Fonts with automatic EULA acceptance
-- Customizes GNOME Dock:
-  - Dock at bottom
-  - Panel mode off
-  - Auto-hide enabled
-  - Icon size set to 32
-- Customizes Terminal profile:
-  - Font: Liberation Mono
-  - Background: `#171717`
-  - Foreground/Text: `#2777FF`
-  - Transparent background with 85% opacity
-- Installs and enables:
-  - Network Stats GNOME Extension
-  - Folder Color support in Nautilus
-- Installs from Flatpak:
-  - Telegram Desktop
-- Installs system tools:
-  - Git, Python 3, pip, venv, Java (OpenJDK 17)
-  - htop, neofetch, preload
-- Installs Cloudflare WARP
-- Installs ProtonVPN
-- Installs VS Code
-- Installs updated File Roller from .deb
-
----
-
-## 🚀 One-liner installation
-
-Run this single command in your terminal (requires `sudo` privileges):
+Copy and paste this single command in your terminal to download and execute the setup script:
 
 ```bash
-wget https://raw.githubusercontent.com/ZAYUVALYA/Ubuntu-Starter-Pack/refs/heads/main/Ubuntu.sh -O Ubuntu.sh && sudo bash Ubuntu.sh
+wget -O Ubuntu.sh "https://raw.githubusercontent.com/ZAYUVALYA/Ubuntu-Starter-Pack/refs/heads/main/Ubuntu.sh" \
+  && chmod +x Ubuntu.sh \
+  && sudo bash Ubuntu.sh
 ```
 
-> 💡 Make sure to run `sudo apt update && sudo apt upgrade -y` **before** executing the script for optimal results.
+This command will:
+1. **Download** the latest `Ubuntu.sh` from the repository
+2. **Make it executable**
+3. **Run it with root privileges** to apply all changes
 
 ---
 
-## 📎 Repository
-GitHub: [ZAYUVALYA/Ubuntu-Starter-Pack](https://github.com/ZAYUVALYA/Ubuntu-Starter-Pack)
+## Repository
+
+🔗 **GitHub Repo:** [https://github.com/ZAYUVALYA/Ubuntu-Starter-Pack](https://github.com/ZAYUVALYA/Ubuntu-Starter-Pack)
 
 ---
 
-Created with ❤️ by [ZAYUVALYA](https://github.com/ZAYUVALYA)
+**Enjoy a faster, cleaner, and more beautiful Ubuntu setup in just one command!** 🚀
