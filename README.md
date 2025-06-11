@@ -1,61 +1,59 @@
 # Ubuntu Starter Pack
 
-Ubuntu Starter Pack is a comprehensive shell script designed to automate the installation and configuration of essential software, themes, extensions, and system tweaks on Ubuntu 24. It delivers a polished, secure, and optimized desktop environment with minimal effort.
-
-## Features
-
-### 🛠 System Enhancements
-- **Folder Color**: Adds PPA and installs `folder-color`, allowing custom folder icons via Nautilus.
-- **GNOME Tweaks & Extension Manager**: Provides advanced settings and extension control.
-- **User Themes Extension**: Enables custom Shell themes.
-- **WhiteSur Dark Theme**: Applies a macOS-inspired theme for both Shell and Legacy Applications.
-- **GNOME Dock Customization**: Centers the Dock, disables panel mode, enables auto-hide, sets icon size to 32px.
-
-### 🚀 Performance & Optimization
-- **Preload**: Speeds up frequently used applications by preloading.
-- **Neofetch & htop**: System information and process monitoring tools.
-
-### 🖥 Development Tools
-- **Git**: Version control system.
-- **Python 3** with **pip** and **venv**: For scripting and virtual environments.
-- **OpenJDK 17**: Java runtime and development kit.
-- **VS Code**: Installed via Snap for code editing.
-
-### 📦 Essential Applications
-- **Telegram Desktop**: Messaging client via Snap.
-- **File Roller 44.5**: Archive manager installed from a Debian package.
-- **Microsoft Fonts**: Automatically installs core fonts with EULA acceptance.
-
-### 🌐 Network & VPN Tools
-- **Cloudflare WARP**: Secure DNS and WAN tunneling.
-- **ProtonVPN**: Privacy-focused VPN client repository installation.
-- **Network Stats** Extension: GNOME extension showing network usage in the top bar.
-
-### 🔄 System Update & Upgrade
-- The script concludes with `sudo apt update && sudo apt upgrade -y` to ensure all packages are current.
+A powerful setup script to instantly configure a fresh Ubuntu 24+ system with modern UI, essential tools, and useful tweaks for developers and daily users.
 
 ---
 
-## Installation
+## 🧰 Features
 
-Run the following single command to set up your system:
+- Removes all Snap-related packages (including Snap Store and Snap Firefox)
+- Installs Firefox from Mozilla's official PPA
+- Installs essential GNOME tools:
+  - GNOME Tweaks
+  - GNOME Shell Extension Manager
+  - Dconf Editor
+- Installs and enables WhiteSur-dark theme
+- Installs Microsoft Fonts with automatic EULA acceptance
+- Customizes GNOME Dock:
+  - Dock at bottom
+  - Panel mode off
+  - Auto-hide enabled
+  - Icon size set to 32
+- Customizes Terminal profile:
+  - Font: Liberation Mono
+  - Background: `#171717`
+  - Foreground/Text: `#2777FF`
+  - Transparent background with 85% opacity
+- Installs and enables:
+  - Network Stats GNOME Extension
+  - Folder Color support in Nautilus
+- Installs from Flatpak:
+  - Telegram Desktop
+- Installs system tools:
+  - Git, Python 3, pip, venv, Java (OpenJDK 17)
+  - htop, neofetch, preload
+- Installs Cloudflare WARP
+- Installs ProtonVPN
+- Installs VS Code
+- Installs updated File Roller from .deb
+
+---
+
+## 🚀 One-liner installation
+
+Run this single command in your terminal (requires `sudo` privileges):
 
 ```bash
-wget -O Ubuntu.sh "https://raw.githubusercontent.com/ZAYUVALYA/Ubuntu-Starter-Pack/refs/heads/main/Ubuntu.sh" \
-  && chmod +x Ubuntu.sh \
-  && sudo bash Ubuntu.sh
+wget https://raw.githubusercontent.com/ZAYUVALYA/Ubuntu-Starter-Pack/refs/heads/main/Ubuntu.sh -O Ubuntu.sh && sudo bash Ubuntu.sh
 ```
 
-This command will:
-1. **Download** the latest `Ubuntu.sh` script.
-2. **Make it executable**.
-3. **Execute** it with root privileges.
+> 💡 Make sure to run `sudo apt update && sudo apt upgrade -y` **before** executing the script for optimal results.
 
 ---
 
-## Repository
-🔗 **GitHub**: [ZAYUVALYA/Ubuntu-Starter-Pack](https://github.com/ZAYUVALYA/Ubuntu-Starter-Pack)
+## 📎 Repository
+GitHub: [ZAYUVALYA/Ubuntu-Starter-Pack](https://github.com/ZAYUVALYA/Ubuntu-Starter-Pack)
 
 ---
 
-Make your Ubuntu 24 installation **secure**, **stylish**, and **ready for productivity** in one step! 🚀
+Created with ❤️ by [ZAYUVALYA](https://github.com/ZAYUVALYA)
